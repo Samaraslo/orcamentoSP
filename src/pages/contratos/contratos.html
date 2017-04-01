@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Contratos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+
+<ion-searchbar (ionInput)="getItems($event)" placeholder="Busca" ></ion-searchbar>
+<div style="float:left">
+<!--  <ion-item>
+      <ion-label color="primary">Ordenar por:</ion-label>
+      <ion-input></ion-input>
+    </ion-item> -->
+</div>
+<div style="float:right">
+  <button ion-button primary  (click)="openModalFiltros()" > Filtrar
+    <ion-icon name="filter"></ion-icon>
+  </button>
+</div>
+  <ion-list >
+          <ion-item *ngFor="let c of contratos">
+            {{c}}
+          </ion-item>
+  </ion-list>
+<!--
+<button fab ion-button danger fab-bottom fab-right ><ion-icon name="add"></ion-icon></button>
+-->
+  </ion-content>
+  <!--  <ion-footer>
+  <ion-fab fab-bottom fab-right fab-fixed>
+    <button ion-fab><ion-icon name="add"></ion-icon></button>
+    <ion-fab-list side="left">
+       <button ion-fab color="facebook"><ion-icon name="logo-facebook"></ion-icon></button>
+       <button ion-fab color="twitter"><ion-icon name="logo-twitter"></ion-icon></button>
+       <button ion-fab color="linkedin"><ion-icon name="logo-linkedin"></ion-icon></button>
+       <button ion-fab color="light"><ion-icon name="logo-chrome"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <button id='fab' class="button button-positive button-fab button-fab-bottom-right">
+      <i class="icon ion-social-twitter"></i>
+    </button>
+</ion-footer>-->
